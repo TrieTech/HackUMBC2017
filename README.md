@@ -1,1 +1,2 @@
-# HackUMBC2017: PocketSousChef
+# HackUMBC2017: 
+## Pocket Sous Chef
