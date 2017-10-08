@@ -16,14 +16,20 @@ public class Recipe
     private String[] ingredientAmount;
     private ServingType[] ingredientAmountType;
     private String[] steps;
+    private String description;
+    private int prepTime;
+    private int fullTime;
 
-    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps,)
+    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps,String newDescription, int newPrepTime,int newFullTime)
     {
         name = newName;
         ingredientName = newIngredientsName;
         ingredientAmount = newIngredientsAmount;
         ingredientAmountType = newIngredientAmountType;
         steps = newSteps;
+        description= newDescription;
+        prepTime = newPrepTime;
+        fullTime = newFullTime;
     }
 
     public String stepsToString()
