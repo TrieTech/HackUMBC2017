@@ -47,9 +47,6 @@ public class MainActivity extends WearableActivity {
         mContainerView = (BoxInsetLayout) findViewById(R.id.container);
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
-
-        mList = (ListView) findViewById(R.id.list);
-        startVoiceRecognitionActivity();
     }
 
     @Override
@@ -82,43 +79,6 @@ public class MainActivity extends WearableActivity {
             mTextView.setTextColor(getResources().getColor(android.R.color.black));
             mClockView.setVisibility(View.GONE);
         }
-    }
-
-    public void startVoiceRecognitionActivity() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-                "Speech recognition demo");
-        startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
-        TextView textBox = (TextView) findViewById(R.id.text);
-        textBox.setText("zsfdgaewsdg");
-    }
-
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-       super.onActivityResult(requestCode, resultCode, data);
-
-       if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK) {
-
-           ArrayList matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-           mList.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, matches));
-
-          /*  String str = "";
-
-            for(int i = 0; i<matches.size();i++)
-            {
-                str = " "+matches.indexOf(i);
-            }*/
-
-           //TextView textBox = (TextView) findViewById(R.id.text);
-           //textBox.setText("5");//matches.size());
-
-
-          /*  if (matches.contains("information")) {
-                informationMenu();
-            }*/
-       }
     }
 
 
