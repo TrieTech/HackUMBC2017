@@ -17,7 +17,7 @@ public class Recipe
     private ServingType[] ingredientAmountType;
     private String[] steps;
 
-    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps,)
+    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps)
     {
         name = newName;
         ingredientName = newIngredientsName;
