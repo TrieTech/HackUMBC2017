@@ -220,7 +220,7 @@ public class MainActivity extends WearableActivity {
         if(currentStep != INGREEDIENT_SCREEN && currentStep !=TITLE_SCREEN){lastStep = currentStep;}
         switch (keyCode) {
             case KeyEvent.KEYCODE_NAVIGATE_NEXT:
-                if(currentStep == TITLE_SCREEN || currentStep == INGREEDIENT_SCREEN){currentStep = lastStep;}
+                if(currentStep == INGREEDIENT_SCREEN){currentStep = lastStep;}
                 else {currentStep++;}
                 changeStep();
                 return true;
@@ -233,7 +233,7 @@ public class MainActivity extends WearableActivity {
                 changeStep();
                 return true;
             case KeyEvent.KEYCODE_NAVIGATE_OUT:
-                currentStep = TITLE_SCREEN;
+                currentStep = INGREEDIENT_SCREEN;
                 changeStep();
                 return true;
             default:
