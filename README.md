@@ -5,12 +5,12 @@
 
 ## What it does
 
-## How I built it
+## How we built it
 
-## Challenges I ran into
+## Challenges we ran into
 
-## Accomplishments that I'm proud of
+## Accomplishments that we are proud of
 
-## What I learned
+## What we learned
 
 ## What's next for Pocket Chef
