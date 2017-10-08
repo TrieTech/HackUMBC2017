@@ -32,7 +32,7 @@ public class Recipe
         fullTime = newFullTime;
     }
 
-    public String getName(){return name;}
+    public String getNameDescription(){return name + "\n" + description;}
 
     public String stepsToString(int step)
     {
@@ -42,11 +42,11 @@ public class Recipe
 
     public String ingredentListToString()
     {
-        String str = "Ingridents: \n";
+        String str = "\t\t\t\tIngridents: \n";
 
         for (int i = 0; i < ingredientName.length;i++)
         {
-            str+= ingredientAmount[i] + " " + servingTypeToString(ingredientAmountType[i], ingredientAmount[i]) + " " + ingredientName[i] + "\n";
+            str+="\t\t\t"+ ingredientAmount[i] + " " + servingTypeToString(ingredientAmountType[i], ingredientAmount[i]) + " " + ingredientName[i] + "\n";
         }
         return str;
     }
