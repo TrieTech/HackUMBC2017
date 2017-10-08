@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="400dp"
             android:maxLines="100"
-            android:gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="#304793"
             />
 </ScrollView>
 </LinearLayout>
