@@ -16,30 +16,33 @@ public class Recipe
     private String[] ingredientAmount;
     private ServingType[] ingredientAmountType;
     private String[] steps;
-
-    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps)
+    private String description;
+    private int prepTime;
+    private int fullTime;
+  
+    public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps,String newDescription, int newPrepTime,int newFullTime)
     {
         name = newName;
         ingredientName = newIngredientsName;
         ingredientAmount = newIngredientsAmount;
         ingredientAmountType = newIngredientAmountType;
         steps = newSteps;
+        description= newDescription;
+        prepTime = newPrepTime;
+        fullTime = newFullTime;
     }
 
-    public String stepsToString()
-    {
-        String str = "";
+    public String getName(){return name;}
 
-        for (int i = 0; i < steps.length;i++)
-        {
-            str+= (i+1)+". "+steps[i] + "\n";
-        }
+    public String stepsToString(int step)
+    {
+        String str = ((step+1)+". "+steps[step] + "\n");
         return str;
     }
 
     public String ingredentListToString()
     {
-        String str = "";
+        String str = "Ingridents: \n";
 
         for (int i = 0; i < ingredientName.length;i++)
         {
@@ -63,10 +66,5 @@ public class Recipe
             else if (type == ServingType.CUP) {return "cup";}
             else {return "";}
         }
-    }
-
-    public String toString()
-    {
-        return (name +"\n\nIngredients:\n"+ingredentListToString()+"\n\nSteps:\n"+stepsToString());
     }
 }
