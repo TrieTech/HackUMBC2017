@@ -19,7 +19,7 @@ public class Recipe
     private String description;
     private int prepTime;
     private int fullTime;
-
+  
     public Recipe(String newName, String[] newIngredientsName,String[] newIngredientsAmount,ServingType[] newIngredientAmountType,String[] newSteps,String newDescription, int newPrepTime,int newFullTime)
     {
         name = newName;
