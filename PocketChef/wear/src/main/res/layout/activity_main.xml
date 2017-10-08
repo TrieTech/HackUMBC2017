@@ -7,18 +7,30 @@
     android:layout_height="match_parent"
     tools:context="nadezhdabzhilyanskaya.pocketchef.MainActivity"
     tools:deviceIds="wear">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#bef7f5"
+    >
     <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        app:layout_box="all"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/title"
+        android:textColor="#722387"
         />
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/clock"
         android:layout_width="wrap_content"
@@ -26,4 +38,7 @@
         android:layout_gravity="bottom|start"
         android:textColor="@android:color/white"
         app:layout_box="all" />
+</ScrollView>
+</LinearLayout>
+
 </android.support.wearable.view.BoxInsetLayout>
